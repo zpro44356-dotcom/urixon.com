@@ -30,8 +30,9 @@ const ContactSection = () => {
             className="inline-block font-display text-lg md:text-2xl tracking-wider text-foreground border-b-2 border-foreground pb-2 hover:text-muted-foreground hover:border-muted-foreground transition-colors duration-300"
             whileHover={{ y: -4 }}
             transition={{ duration: 0.2 }}
-          >
-            hello@urixon.com
+          > 
+            <p><b>Contact Us</b> </p> 
+            +1 (917) 735-4682
           </motion.a>
 
           <div className="flex justify-center gap-12 mt-16">
