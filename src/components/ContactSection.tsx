@@ -32,7 +32,7 @@ const ContactSection = () => {
             transition={{ duration: 0.2 }}
           > 
             <p><b>Contact Us</b> </p> 
-            +1 (917) 735-4682
+            info@urixon.com | &nbsp;&nbsp;&nbsp;+1 (917) 735-4682
           </motion.a>
 
           <div className="flex justify-center gap-12 mt-16">
