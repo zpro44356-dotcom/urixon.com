@@ -19,11 +19,15 @@
   </head>
 
   <body>
-    <div id="root">
-    <!-- <center>
-      <p style="font-size: 40px;color:white;font-style:italic;padding-top: 20px;">Isy Bukhar Nhi hy... Iskii</p>
-    </center> -->
-    </div>
+    <div id="root"></div>
+    <!-- Netlify form detection (static fallback). DO NOT REMOVE. -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="service" />
+      <textarea name="message"></textarea>
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
