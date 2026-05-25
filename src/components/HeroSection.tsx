@@ -1,17 +1,21 @@
 import { motion } from "framer-motion";
 import heroArt from "@/assets/hero-art.jpg";
 
+const SHOW_HERO_ART = false; // <-- Set to `false` for plain black
+
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden noise-bg">
       <div className="absolute inset-0">
-        <img
-          src={heroArt}
-          alt="Abstract geometric art"
-          width={1920}
-          height={1080}
-          className="w-full h-full object-cover opacity-40"
-        />
+        {SHOW_HERO_ART && (
+          <img
+            src={heroArt}
+            alt="Abstract geometric art"
+            width={1920}
+            height={1080}
+            className="w-full h-full object-cover opacity-40"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
       </div>
 
