@@ -58,7 +58,22 @@ const ContactSection = () => {
 
   const fieldClass =
     "w-full bg-transparent border-b border-border focus:border-foreground outline-none py-4 font-body text-sm md:text-base text-foreground placeholder:text-muted-foreground transition-colors duration-300";
-
+  
+  const socials = [
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/urixonstudio/",
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/profile.php?id=61572163403657",
+  },
+  
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/company/urixon/?viewAsMember=true",
+  },
+];
   return (
     <section id="contact" className="px-6 md:px-12 py-24 md:py-40 border-t border-border">
       <div className="max-w-[1400px] mx-auto">
@@ -180,16 +195,18 @@ const ContactSection = () => {
           </motion.form>
 
           <div className="flex flex-wrap justify-center gap-12 mt-20 md:mt-28">
-            {["Instagram", "Behance", "Dribbble", "LinkedIn"].map((social) => (
-              <a
-                key={social}
-                href="#"
-                className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
-              >
-                {social}
-              </a>
-            ))}
-          </div>
+  {socials.map((social) => (
+    <a
+      key={social.name}
+      href={social.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
+    >
+      {social.name}
+    </a>
+  ))}
+</div>
         </motion.div>
       </div>
     </section>

@@ -123,7 +123,7 @@ const ServicesSection = () => {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-body text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">Marketing & Growth</p>
+          {/* <p className="font-body text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">Marketing & Growth</p> */}
           <h2 className="font-display text-5xl md:text-7xl font-bold tracking-tight text-foreground">
             Services
           </h2>

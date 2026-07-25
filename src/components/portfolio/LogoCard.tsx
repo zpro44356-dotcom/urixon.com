@@ -3,7 +3,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { LogoProject } from "./portfolioData";
 
-const AUTO_CYCLE_MS = 4000;
+const AUTO_CYCLE_MS = 3600000;
 
 const slideVariants = {
   enter: (d: number) => ({ x: d > 0 ? "100%" : "-100%", opacity: 0 }),

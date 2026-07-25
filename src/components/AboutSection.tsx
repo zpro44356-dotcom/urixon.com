@@ -2,10 +2,10 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const stats = [
-  { value: "150+", label: "Projects Delivered" },
-  { value: "40+", label: "Global Clients" },
+  { value: "300+", label: "Projects Delivered" },
+  { value: "50+", label: "Global Clients" },
   { value: "12", label: "Design Awards" },
-  { value: "2026", label: "Founded" },
+  { value: "2023", label: "Founded" },
 ];
 
 const AboutSection = () => {

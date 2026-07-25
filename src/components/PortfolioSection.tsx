@@ -17,9 +17,9 @@ const PortfolioSection = () => {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <p className="font-body text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
+            {/* <p className="font-body text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
               Selected Work
-            </p>
+            </p> */}
             <h2 className="font-display text-5xl md:text-7xl font-bold tracking-tight text-foreground">
               Portfolio
             </h2>
