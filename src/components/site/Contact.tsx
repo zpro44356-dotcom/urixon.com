@@ -33,9 +33,25 @@ export function Contact() {
 
     setStatus("sending");
     setError("");
-    const body = new URLSearchParams({ "form-name": "contact", ...parsed.data });
+
+    const body = new URLSearchParams();
+
+    formData.forEach((value, key) => {
+      if (typeof value === "string") {
+        body.append(key, value);
+      }
+    });
+
+    body.set("form-name", "contact");
+
     try {
-      const response = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() });
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: body.toString(),
+      });
       if (!response.ok) throw new Error("Submission failed");
       form.reset();
       setStatus("sent");
@@ -95,18 +111,7 @@ export function Contact() {
         <Reveal>
           <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit} noValidate>
             <input type="hidden" name="form-name" value="contact" />
-            <p
-              style={{
-                position: "absolute",
-                overflow: "hidden",
-                clip: "rect(0 0 0 0)",
-                height: "1px",
-                width: "1px",
-                margin: "-1px",
-                padding: 0,
-                border: 0,
-              }}
-            >
+            <p hidden>
               <label>
                 Don&apos;t fill this out:
                 <input name="bot-field" />
