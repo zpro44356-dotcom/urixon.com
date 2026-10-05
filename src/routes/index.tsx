@@ -13,7 +13,7 @@ import { Pricing } from "@/components/site/Pricing";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 
-const title = "URIXON — Brand, Product & Growth Studio";
+const title = "URIXON";
 const description =
   "URIXON is a full-spectrum digital agency building powerful brands, engineering cutting-edge software, and driving measurable growth.";
 
